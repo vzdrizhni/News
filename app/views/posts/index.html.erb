@@ -1,15 +1,16 @@
 <p style="color: green"><%= notice %></p>
-
-<h1><%= link_to "НА ГЛАВНУЮ", root_path %></h1>
+<div class="nav-bar">
+  <h1><%= link_to "НА ГЛАВНУЮ", root_path %></h1>
+</div>
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <%= render 'posts/post_card', post: post %>
   <% end %>
 </div>
-<%= paginate @posts %>
-
-<%= link_to "СОЗДАТЬ НОВУЮ СТАТЬЮ", new_post_path %>
+<div class="new-article">
+  <%= link_to "СОЗДАТЬ НОВУЮ СТАТЬЮ", new_post_path, class: "project-link" %>
+</div>
+<div class="pagination">
+  <%= paginate @posts %>
+</div>

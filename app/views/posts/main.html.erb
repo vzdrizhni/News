@@ -1,15 +1,13 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>FastNews</h1>
+<div>
+  <h1>FastNews</h1>
+</div>
 
 <div id="posts">
   <% @last_posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "СМОТРЕТЬ", post %>
-    </p>
+    <%= render 'posts/post_card', post: post %>
   <% end %>
 </div>
 <div>
-  <%= link_to 'смотреть все новости'.upcase, posts_path %>
+  <%= link_to 'смотреть все новости'.upcase, posts_path, class: "project-link" %>
 </div>

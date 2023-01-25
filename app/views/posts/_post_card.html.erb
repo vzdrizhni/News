@@ -1,0 +1,17 @@
+<%= link_to post do %>
+  <div class="projcard-container">
+    <div class="projcard projcard-blue">
+      <div class="projcard-innerbox">
+        <%= image_tag(post.image_url, class:"projcard-img") if post.image %>
+        <div class="projcard-textbox">
+          <div class="projcard-title"><%= post.title %></div>
+          <div class="projcard-bar"></div>
+          <div class="projcard-description"><%= post.body %></div>
+          <div class="projcard-tagbox">
+            <span class="projcard-tag"><%= post.date.strftime "%d/%m/%Y"%></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
