@@ -1,0 +1,8 @@
+<div class="nav-bar">
+  <% if current_page?(root_path) %>
+    <span><h1 id="title">FAST NEWS</h1></span>
+  <% else %>
+    <span class="one"><h1><%= link_to "FAST NEWS", root_path %></h1></span>
+  <% end %>
+  <span class="one"><h1><%= link_to "ADMIN", admin_root_path %></h1></span>
+</div>
