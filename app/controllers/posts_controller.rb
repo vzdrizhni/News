@@ -2,12 +2,12 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
   def main
-    @last_posts = Post.last(3)
+    @last_posts = Post.last(3).reverse
   end
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.order(:date).page params[:page]
+    @posts = Post.order(id: :desc).page params[:page]
   end
 
   # GET /posts/1 or /posts/1.json

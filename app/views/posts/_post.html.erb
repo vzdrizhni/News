@@ -1,20 +1,10 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
+<header style="background-image: url(<%= image_path(post.image.url) if post.image %>);">
+  <h1><%= post.title %></h1>
+</header>
 
+<main>
+  <p><%= post.body %></p>
   <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
     <%= post.date.strftime "%d/%m/%Y"%>
   </p>
-
-  <p>
-    <%= image_tag post.image_url if post.image %>
-  </p>
-</div>
+</main>
