@@ -286,6 +286,7 @@ a:hover:before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #2E2F30;
 }
 
 .post-wrapper {
