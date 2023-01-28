@@ -289,9 +289,34 @@ a:hover:before {
     background-color: #2E2F30;
 }
 
-.post-wrapper {
+.post-wrapper, .form-wrapper {
     display: flex;
     justify-content: center;
+}
+
+.form-wrapper {
+    width: 80%;
+    margin: auto;
+    border: #2E2F30;
+}
+
+.form-wrapper form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-wrapper form > div {
+    margin-bottom: 25px;
+}
+
+#post_body {
+    height: 250px;
+}
+
+h1 {
+    text-align: center;
 }
 
 .pagination a, .pagination span.gap {
