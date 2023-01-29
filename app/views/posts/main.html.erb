@@ -1,0 +1,10 @@
+<div class="post-wrapper">
+  <div id="posts">
+    <% @last_posts.each do |post| %>
+      <%= render 'posts/post_card', post: post %>
+    <% end %>
+  </div>
+</div>
+<div class="new-article">
+  <%= link_to 'смотреть все новости'.upcase, posts_path, class: "project-link" %>
+</div>

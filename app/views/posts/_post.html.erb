@@ -1,0 +1,10 @@
+<header style="background-image: url(<%= image_path(post.image.url) if post.image %>);">
+  <h1><%= post.title %></h1>
+</header>
+
+<main>
+  <p><%= post.body %></p>
+  <p>
+    <%= post.date.strftime "%d/%m/%Y"%>
+  </p>
+</main>
