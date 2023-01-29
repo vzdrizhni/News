@@ -4,6 +4,14 @@ class Post < ApplicationRecord
   validates :body, presence: true
   has_rich_text :body
 
+  def content_text=(body)
+    self.body.body = body
+  end
+
+  def content_text
+    body.to_s.gsub(/\A<div class="trix-content">(.*)<\/div>\z/m, '\1').strip.html_safe
+  end
+
   before_save do
     self.date = Date.today
   end

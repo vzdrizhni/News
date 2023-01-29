@@ -61,6 +61,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activeadmin_quill_editor (1.0.0)
+      activeadmin (~> 2.0)
     activejob (7.0.4.1)
       activesupport (= 7.0.4.1)
       globalid (>= 0.3.6)
@@ -129,8 +131,6 @@ GEM
       ruby2_keywords
     erubi (1.12.0)
     ffi (1.15.5)
-    font-awesome-sass (6.2.1)
-      sassc (~> 2.0)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
@@ -315,13 +315,13 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  activeadmin_quill_editor
   bootsnap
   cancancan
   capybara
   debug
   devise
   draper
-  font-awesome-sass (~> 6.2.1)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
@@ -330,6 +330,7 @@ DEPENDENCIES
   pundit
   rails (~> 7.0.3, >= 7.0.3.1)
   sass-rails
+  sassc
   selenium-webdriver
   shrine (~> 3.3)
   sprockets-rails
