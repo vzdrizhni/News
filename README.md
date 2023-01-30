@@ -50,6 +50,11 @@ To have this app on your pc, you need to:
   - ```$ rails db:migrate```
 * and finally, you can test it in the console by running
   - ```$ rails server``` and using ```localhost:3000``` into your browser address bar to start using it
+  
+## Admin Credentials
+
+* email: admin@example.com
+* password: password
 
 ### Built With
 This project was built using these technologies.
