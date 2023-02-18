@@ -1,0 +1,11 @@
+<div class="signin">
+  <% if current_user %>
+    <h3>Hi  <%= current_user.email%></h3>
+    |
+    <span class="one"><h3><%= link_to 'LOGOUT', destroy_user_session_path, data: { turbo_method: :delete } %></h3><span class="one">
+  <% else %>
+    <span class="one"><h3><%= link_to 'LOGIN', user_session_path %></h3><span class="one">
+    |
+    <span class="one"><h3><%= link_to 'SIGNUP', new_user_registration_path %></h3><span class="one">
+  <% end %>
+</div>

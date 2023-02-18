@@ -363,13 +363,13 @@ a:hover:before {
     justify-content: center;
 }
 
-.form-wrapper {
+.form-wrapper, .new_user {
     width: 80%;
     margin: auto;
     border: #2E2F30;
 }
 
-.form-wrapper form {
+.form-wrapper form, .new_user {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -433,3 +433,37 @@ h1 {
     border: none;
 }
 
+.sign-field {
+    color: #2E2F30;
+}
+
+.sign-header {
+    text-align: center;
+}
+
+.sign-link {
+    text-align: center;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 25px
+}
+
+.err-msg {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 2px;
+}
+
+.alert {
+    text-align: center;
+    font-size: 25px;
+    color: #730E15;
+}
+
+.signin {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
