@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :signed_in_only!, only: %i[create]
 
   def main
     @last_posts = Post.last(3).reverse
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
-
+    @post.user_id = current_user.id
     respond_to do |format|
       if @post.save
         format.html { redirect_to post_url(@post), notice: "Статья была упешно создана" }

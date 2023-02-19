@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true
   has_rich_text :body
+  belongs_to :user
+  has_many :comments
 
   def content_text=(body)
     self.body.body = body

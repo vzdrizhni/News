@@ -1,0 +1,12 @@
+<div class="comment-wrapper">
+  <% @post.comments.includes(:user).each do |comment| %>
+    <div class="user-comment">
+      <div>
+        <%= comment.user.email %>
+      </div>
+      <div class="content">
+        <%= comment.body %>
+      </div>
+    </div>
+  <% end %>
+</div>

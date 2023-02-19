@@ -1,4 +1,24 @@
 <%= render @post %>
+<br>
+<br>
+<br>
+<div class="card">
+  <div class="card-body">
+    <p class="comments">Комментарии</p>
+    <% if current_user%>
+      <%= form_with(model: [@post, @post.comments.build]) do |f| %>
+        <div class="form-group">
+          <%= f.text_area :body%>
+        </div>
+        <%= f.submit 'Submit'%>
+      <% end %>
+    <% else %>
+      <%= link_to "Залогиньтесь чтобы оставлять комментарии", new_session_path(:user), class: "sign-link"%><br />
+    <% end %>
+  </div>
+</div>
+
+<%= render 'comments/index' %>
 
 <div class="new-article">
   <%= link_to "НАЗАД К НОВОСТЯМ", posts_path %>
